@@ -4,7 +4,7 @@ from collections import deque
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
-from matplotlib import cm, colors, patches
+from matplotlib import cm, colors, patches, colormaps
 
 from shapely.geometry import LineString
 from descartes import PolygonPatch
@@ -92,7 +92,7 @@ class Display:
             max_n_sensors = 1
 
         # Specify colors for agents and road
-        colors = list(cm.get_cmap('Set1').colors)
+        colors = list(colormaps.get_cmap('Set1').colors)
         rgba2rgb = lambda rgba: np.clip(
             (1 - rgba[:3]) * rgba[3] + rgba[:3], 0., 1.)
         colors = [np.array(list(c) + [0.6]) for c in colors]
