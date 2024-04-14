@@ -320,7 +320,7 @@ class LidarSynthesis:
             sin(pitch)])
         return rays
 
-    def _compute_sparse_inds(self, pcd:`` Pointcloud) -> np.ndarray:
+    def _compute_sparse_inds(self, pcd: Pointcloud) -> np.ndarray:
         """ Compute the indicies on the image representation which will be
         filled for a given pointcloud """
 
